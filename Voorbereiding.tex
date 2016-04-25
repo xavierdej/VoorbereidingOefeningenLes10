@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\usepackage{circuitikz}
+
+
+\newcommand{\ov}[1]{\bar{#1}}
+
+\title{Voorbereiding oefeningen les 10}
+\author{
+        Leen Van Houdt \\
+        Sander Mergan \\
+        Seppe Duwé \\
+        Willem Melis \\
+        Wouter Duyols \\
+        Xavier Dejager
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Oefening 0.5}
+
+Met een tegenvoorbeeld kunnen we aantonen dat de bewering niet waar is. We stellen dat $x=0$ en $z=0$. Er geldt dat $xy=0$ en $xz=0$. Hieruit volgt dat $xy=xz$. We weten echter dat $y\neq z$. De bewering geldt dus enkel als $x=1$.
+\vspace{2mm}
+\newline
+We kunnen de bewering dus aanvullen met ``gegeven dat $x=1$'', en dit kan bewezen worden door $x$ te vervangen door $1$: $xy = xz \Rightarrow 1.y = 1.z \Rightarrow y = z$ maar dit is uiteraard triviaal.
+\vspace{2mm}
+\newline
+Ook kunnen we de bewering omdraaien: ``in de Booleaanse algebra volgt uit $y=z$ dat $xy=xz$'', en dit kan bewezen worden door $y$ te vervangen door $z$ in de 2\textsuperscript{e} vergelijking maar ook dit bewijs is triviaal.
+
+\clearpage
+
+\section{Oefening 4.30}
+
+\paragraph{Deel 1}
+Met de exhaustieve methode (alle gevallen nagaan in de waarheidstabel) vinden we volgende oplossing:
+\begin{table}[H]
+\centering
+\begin{tabular}{|r||c|c|c|c||c|}
+	\hline
+	\bf{N} & \bf{x} & \bf{y} & \bf{z} & \bf{t} & \bf{v} \\
+	\hline
+	0    & 0 & 0 & 0 & 0    & 1 \\
+	1    & 0 & 0 & 0 & 1    & 0 \\
+	2    & 0 & 0 & 1 & 0    & 0 \\
+	3    & 0 & 0 & 1 & 1    & 1 \\
+	4    & 0 & 1 & 0 & 0    & 0 \\
+	5    & 0 & 1 & 0 & 1    & 1 \\
+	6    & 0 & 1 & 1 & 0    & 1 \\
+	7    & 0 & 1 & 1 & 1    & 0 \\
+	8    & 1 & 0 & 0 & 0    & 0 \\
+	9    & 1 & 0 & 0 & 1    & 1 \\
+	10   & 1 & 0 & 1 & 0    & 1 \\
+	11   & 1 & 0 & 1 & 1    & 0 \\
+	12   & 1 & 1 & 0 & 0    & 1 \\
+	13   & 1 & 1 & 0 & 1    & 0 \\
+	14   & 1 & 1 & 1 & 0    & 0 \\
+	15   & 1 & 1 & 1 & 1    & 1 \\
+	\hline
+\end{tabular}
+\end{table}
+
+De mintermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 1$ is: 
+\vspace{2mm}
+\newline
+$v = \ov{x}\ov{y}\ov{z}\ov{t} + \ov{x}\ov{y}zt + \ov{x}y\ov{z}t + \ov{x}yz\ov{t} + x\ov{y}\ov{z}t + x\ov{y}z\ov{t} + xy\ov{z}\ov{t} + xyzt$
+\vspace{2mm}
+De maxtermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 0$ is:
+\vspace{2mm}
+\newline
+$v = (x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)$
+\vspace{2mm}
+\newline
+De maxtermnormaalvorm bijvoorbeeld kan gerealiseerd worden met volgend poortennetwerk:
+
+
+\texttt{Insert picture of network here \ldots}
+% \begin{figure}[H]
+% \begin{center}
+% \includegraphics[width=1.0\textwidth]{result_11b.eps}
+% \end{center}
+% \caption{Convergentie van eigenwaardes op diagonaal}
+% \label{result11b}
+% \end{figure}
+
+\paragraph{Deel 2}
+
+Gevraagd is de vergelijking $v = 1$ op te lossen met de systematische methode. $v = 1$ als $\ov{v} = 0$.
+
+$\ov{v}$ kan makkelijk bekomen worden door de negatie van de maxtermnormaalvorm te nemen en deze vervolgens te vereenvoudigen met de wet van de Morgan:
+\vspace*{2mm}
+\newline
+$\ov{v} = \neg ((x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)) = 0$
+\vspace*{2mm}
+\newline
+$\Leftrightarrow \ov{x}\ov{y}\ov{z}t + \ov{x}\ov{y}z\ov{t} + \ov{x}y\ov{z}\ov{t} + \ov{x}yzt + x\ov{y}\ov{z}\ov{t} + x\ov{y}zt + xy\ov{z}t + xyz\ov{t} = 0$
+\vspace{2mm}
+We beschouwen enkel x als veranderlijke en herschrijven de vergelijking:
+\vspace{2mm}
+\newline
+$x(\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) + \ov{x}(\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt) = 0$ 
+\vspace{2mm}
+\newline
+Met behulp van de wet van De Morgan kunnen we aantonen dat:
+\vspace{2mm}
+\newline
+$\neg (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) = (\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt)$
+\vspace{2mm}
+\newline
+Stel voor de leesbaarheid $q = (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t})$, dan volgt dat 
+$\ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt$
+\vspace{2mm}
+\newline
+De vergelijking wordt dan:
+\vspace{2mm}
+\newline
+$xq + \ov{x}\ov{q} = 0$
+\vspace{2mm}
+\newline
+De oplossing voor x is:
+\vspace{2mm}
+\newline
+$x = \ov{q} + \ov{q}\lambda = \ov{q}(1+\lambda) = \ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt = \ov{y}(\ov{z}t + z\ov{t}) + y(\ov{z}\ov{t} + zt)$
+\vspace{2mm}
+\newline
+De voorwaarde voor oplosbaarheid is:
+\vspace{2mm}
+\newline
+$q.\ov{q} = 0$
+\vspace{2mm}
+\newline
+
+\section{Oefening 4.41}
+\paragraph{1}
+
+\paragraph{2}
+
+\paragraph{3}
+
+\paragraph{4}
+
+\end{document}

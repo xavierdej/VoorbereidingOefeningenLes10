@@ -5,6 +5,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 
+\usepackage{amsmath}
+
 \usepackage{circuitikz}
 
 
@@ -136,6 +138,43 @@ De voorwaarde voor oplosbaarheid is:
 $q.\ov{q} = 0$
 \vspace{2mm}
 \newline
+Dit geldt echter altijd dus deze voorwaarde is triviaal. $y$, $z$ en $t$ kunnen dus willekeurig gekozen worden. Stel $y = \lambda_{1}$, $z = \lambda_{2}$ en $t = \lambda_{3}$.
+\vspace{2mm}
+\newline
+We krijgen volgend stelsel:
+\vspace{2mm}
+\newline
+\[  
+	\begin{cases}
+	    x &= \ov{\lambda_{1}}(\ov{\lambda_{2}}\lambda_{3} + \lambda_{2}\ov{\lambda_{3}})+\lambda_{1}(\ov{\lambda_{2}}\ov{\lambda_{3}}+\lambda_{2}\lambda_{3})\\
+	    y &= \lambda_{1}\\
+	    z &= \lambda_{2}\\
+	    t &= \lambda_{3}\\
+  	\end{cases}
+\]
+\vspace{2mm}
+\newline
+Als we nu alle waarden doorlopen voor  $\lambda_{1}$, $\lambda_{2}$ en $\lambda_{3}$ krijgen we alle oplossingen voor $\ov{v} = 1$ en dus voor $v = 0$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c||c|c|c|c|}
+	\hline
+	\bf{$\lambda_{1}$} & \bf{$\lambda_{2}$} & \bf{$\lambda_{3}$} & \bf{$x$} & \bf{$y$} & \bf{$z$} & \bf{$t$} \\
+	\hline
+	0 & 0 & 0   &   0 & 0 & 0 & 0 \\
+	0 & 0 & 1   &   1 & 0 & 0 & 1 \\
+	0 & 1 & 0   &   1 & 0 & 1 & 0 \\
+	0 & 1 & 1   &   0 & 0 & 1 & 1 \\
+	1 & 0 & 0   &   1 & 1 & 0 & 0 \\
+	1 & 0 & 1   &   0 & 1 & 0 & 1 \\
+	1 & 1 & 0   &   0 & 1 & 1 & 0 \\
+	1 & 1 & 1   &   1 & 1 & 1 & 1 \\
+	\hline
+\end{tabular}
+\end{table}
+
+Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 1) dan zien we dat deze waarden voor $x$, $y$, $z$ en $t$ inderdaad overeenkomen met $v=1$.
 
 \section{Oefening 4.41}
 \paragraph{1}

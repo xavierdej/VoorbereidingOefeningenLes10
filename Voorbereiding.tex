@@ -72,25 +72,24 @@ Met de exhaustieve methode (alle gevallen nagaan in de waarheidstabel) vinden we
 De mintermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 1$ is: 
 \vspace{2mm}
 \newline
-$v = \ov{x}\ov{y}\ov{z}\ov{t} + \ov{x}\ov{y}zt + \ov{x}y\ov{z}t + \ov{x}yz\ov{t} + x\ov{y}\ov{z}t + x\ov{y}z\ov{t} + xy\ov{z}\ov{t} + xyzt$
+$$v = \ov{x}\ov{y}\ov{z}\ov{t} + \ov{x}\ov{y}zt + \ov{x}y\ov{z}t + \ov{x}yz\ov{t} + x\ov{y}\ov{z}t + x\ov{y}z\ov{t} + xy\ov{z}\ov{t} + xyzt$$
 \vspace{2mm}
 De maxtermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 0$ is:
 \vspace{2mm}
 \newline
-$v = (x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)$
+$$v = (x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)$$
 \vspace{2mm}
 \newline
 De maxtermnormaalvorm bijvoorbeeld kan gerealiseerd worden met volgend poortennetwerk:
 
 
-\texttt{Insert picture of network here \ldots}
-% \begin{figure}[H]
-% \begin{center}
-% \includegraphics[width=1.0\textwidth]{result_11b.eps}
-% \end{center}
-% \caption{Convergentie van eigenwaardes op diagonaal}
-% \label{result11b}
-% \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{netwerk}
+\end{center}
+\caption{Poortnetwerk met maxtermen}
+\label{result11b}
+\end{figure}
 
 \paragraph{Deel 2}
 
@@ -99,43 +98,43 @@ Gevraagd is de vergelijking $v = 1$ op te lossen met de systematische methode. $
 $\ov{v}$ kan makkelijk bekomen worden door de negatie van de maxtermnormaalvorm te nemen en deze vervolgens te vereenvoudigen met de wet van de Morgan:
 \vspace*{2mm}
 \newline
-$\ov{v} = \neg ((x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)) = 0$
+$$\ov{v} = \neg ((x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)) = 0$$
 \vspace*{2mm}
 \newline
-$\Leftrightarrow \ov{x}\ov{y}\ov{z}t + \ov{x}\ov{y}z\ov{t} + \ov{x}y\ov{z}\ov{t} + \ov{x}yzt + x\ov{y}\ov{z}\ov{t} + x\ov{y}zt + xy\ov{z}t + xyz\ov{t} = 0$
+$$\Leftrightarrow \ov{x}\ov{y}\ov{z}t + \ov{x}\ov{y}z\ov{t} + \ov{x}y\ov{z}\ov{t} + \ov{x}yzt + x\ov{y}\ov{z}\ov{t} + x\ov{y}zt + xy\ov{z}t + xyz\ov{t} = 0$$
 \vspace{2mm}
 We beschouwen enkel x als veranderlijke en herschrijven de vergelijking:
 \vspace{2mm}
 \newline
-$x(\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) + \ov{x}(\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt) = 0$ 
+$$x(\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) + \ov{x}(\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt) = 0$$ 
 \vspace{2mm}
 \newline
 Met behulp van de wet van De Morgan kunnen we aantonen dat:
 \vspace{2mm}
 \newline
-$\neg (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) = (\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt)$
+$$\neg (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) = (\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt)$$
 \vspace{2mm}
 \newline
 Stel voor de leesbaarheid $q = (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t})$, dan volgt dat 
-$\ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt$
+$$\ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt$$
 \vspace{2mm}
 \newline
 De vergelijking wordt dan:
 \vspace{2mm}
 \newline
-$xq + \ov{x}\ov{q} = 0$
+$$xq + \ov{x}\ov{q} = 0$$
 \vspace{2mm}
 \newline
 De oplossing voor x is:
 \vspace{2mm}
 \newline
-$x = \ov{q} + \ov{q}\lambda = \ov{q}(1+\lambda) = \ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt = \ov{y}(\ov{z}t + z\ov{t}) + y(\ov{z}\ov{t} + zt)$
+$$x = \ov{q} + \ov{q}\lambda = \ov{q}(1+\lambda) = \ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt = \ov{y}(\ov{z}t + z\ov{t}) + y(\ov{z}\ov{t} + zt)$$
 \vspace{2mm}
 \newline
 De voorwaarde voor oplosbaarheid is:
 \vspace{2mm}
 \newline
-$q.\ov{q} = 0$
+$$q.\ov{q} = 0$$
 \vspace{2mm}
 \newline
 Dit geldt echter altijd dus deze voorwaarde is triviaal. $y$, $z$ en $t$ kunnen dus willekeurig gekozen worden. Stel $y = \lambda_{1}$, $z = \lambda_{2}$ en $t = \lambda_{3}$.
@@ -144,7 +143,7 @@ Dit geldt echter altijd dus deze voorwaarde is triviaal. $y$, $z$ en $t$ kunnen 
 We krijgen volgend stelsel:
 \vspace{2mm}
 \newline
-\[  
+\[ 
 	\begin{cases}
 	    x &= \ov{\lambda_{1}}(\ov{\lambda_{2}}\lambda_{3} + \lambda_{2}\ov{\lambda_{3}})+\lambda_{1}(\ov{\lambda_{2}}\ov{\lambda_{3}}+\lambda_{2}\lambda_{3})\\
 	    y &= \lambda_{1}\\
@@ -175,6 +174,8 @@ Als we nu alle waarden doorlopen voor  $\lambda_{1}$, $\lambda_{2}$ en $\lambda_
 \end{table}
 
 Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 1) dan zien we dat deze waarden voor $x$, $y$, $z$ en $t$ inderdaad overeenkomen met $v=1$.
+
+\newpage
 
 \section{Oefening 4.41}
 \paragraph{1}

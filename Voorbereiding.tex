@@ -1,13 +1,16 @@
 \documentclass[12pt]{article}
 
-\usepackage[a4paper, margin=15mm]{geometry}
+\usepackage[a4paper, margin=1in]{geometry}
 
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 
+\usepackage{pifont}
+
 \usepackage[parfill]{parskip}
 
 \usepackage{amsmath}
+\usepackage{amsfonts}
 
 \usepackage{circuitikz}
 
@@ -72,16 +75,17 @@ Met de exhaustieve methode (alle gevallen nagaan in de waarheidstabel) vinden we
 \end{table}
 
 De mintermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 1$ is: 
-\vspace{2mm}
-\newline
-$$v = \ov{x}\ov{y}\ov{z}\ov{t} + \ov{x}\ov{y}zt + \ov{x}y\ov{z}t + \ov{x}yz\ov{t} + x\ov{y}\ov{z}t + x\ov{y}z\ov{t} + xy\ov{z}\ov{t} + xyzt$$
-\vspace{2mm}
+
+\begin{equation}
+v = \ov{x}\ov{y}\ov{z}\ov{t} + \ov{x}\ov{y}zt + \ov{x}y\ov{z}t + \ov{x}yz\ov{t} + x\ov{y}\ov{z}t + x\ov{y}z\ov{t} + xy\ov{z}\ov{t} + xyzt
+\end{equation}
+
 De maxtermnormaalvorm wordt gevonden door te kijken naar de kolommen waar $f = 0$ is:
-\vspace{2mm}
-\newline
-$$v = (x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)$$
-\vspace{2mm}
-\newline
+
+\begin{align}
+v = (x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) \nonumber \\ (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)
+\end{align}
+
 De maxtermnormaalvorm bijvoorbeeld kan gerealiseerd worden met volgend poortennetwerk:
 
 
@@ -98,63 +102,59 @@ De maxtermnormaalvorm bijvoorbeeld kan gerealiseerd worden met volgend poortenne
 Gevraagd is de vergelijking $v = 1$ op te lossen met de systematische methode. $v = 1$ als $\ov{v} = 0$.
 
 $\ov{v}$ kan makkelijk bekomen worden door de negatie van de maxtermnormaalvorm te nemen en deze vervolgens te vereenvoudigen met de wet van de Morgan:
-\vspace*{2mm}
-\newline
-$$\ov{v} = \neg ((x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)) = 0$$
-\vspace*{2mm}
-\newline
-$$\Leftrightarrow \ov{x}\ov{y}\ov{z}t + \ov{x}\ov{y}z\ov{t} + \ov{x}y\ov{z}\ov{t} + \ov{x}yzt + x\ov{y}\ov{z}\ov{t} + x\ov{y}zt + xy\ov{z}t + xyz\ov{t} = 0$$
-\vspace{2mm}
+
+\begin{align}
+\ov{v} = \neg ((x+y+z+\ov{t}) (x+y+\ov{z}+t) (x+\ov{y}+z+t) (x+\ov{y}+\ov{z}+\ov{t}) (\ov{x}+y+z+t) \nonumber \\ (\ov{x}+y+\ov{z}+\ov{t}) (\ov{x}+\ov{y}+z+\ov{t}) (\ov{x}+\ov{y}+\ov{z}+t)) = 0
+\end{align}
+
+\begin{equation}
+\Leftrightarrow \ov{x}\ov{y}\ov{z}t + \ov{x}\ov{y}z\ov{t} + \ov{x}y\ov{z}\ov{t} + \ov{x}yzt + x\ov{y}\ov{z}\ov{t} + x\ov{y}zt + xy\ov{z}t + xyz\ov{t} = 0
+\end{equation}
+
 We beschouwen enkel x als veranderlijke en herschrijven de vergelijking:
-\vspace{2mm}
-\newline
-$$x(\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) + \ov{x}(\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt) = 0$$ 
-\vspace{2mm}
-\newline
+
+\begin{equation}
+x(\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) + \ov{x}(\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt) = 0
+\end{equation}
+
 Met behulp van de wet van De Morgan kunnen we aantonen dat:
-\vspace{2mm}
-\newline
-$$\neg (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) = (\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt)$$
-\vspace{2mm}
-\newline
-Stel voor de leesbaarheid $q = (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t})$, dan volgt dat 
-$$\ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt$$
-\vspace{2mm}
-\newline
+
+\begin{equation}
+\neg (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t}) = (\ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt)
+\end{equation}
+
+Stel voor de leesbaarheid $q = (\ov{y}\ov{z}\ov{t} + \ov{y}zt + y\ov{z}t + yz\ov{t})$, dan volgt dat: 
+$\ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt$.
 De vergelijking wordt dan:
-\vspace{2mm}
-\newline
-$$xq + \ov{x}\ov{q} = 0$$
-\vspace{2mm}
-\newline
+
+\begin{equation}
+xq + \ov{x}\ov{q} = 0
+\end{equation}
+
 De oplossing voor x is:
-\vspace{2mm}
-\newline
-$$x = \ov{q} + \ov{q}\lambda = \ov{q}(1+\lambda) = \ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt = \ov{y}(\ov{z}t + z\ov{t}) + y(\ov{z}\ov{t} + zt)$$
-\vspace{2mm}
-\newline
+
+\begin{equation}
+x = \ov{q} + \ov{q}\lambda = \ov{q}(1+\lambda) = \ov{q} = \ov{y}\ov{z}t + \ov{y}z\ov{t} + y\ov{z}\ov{t} + yzt = \ov{y}(\ov{z}t + z\ov{t}) + y(\ov{z}\ov{t} + zt)
+\end{equation}
+
 De voorwaarde voor oplosbaarheid is:
-\vspace{2mm}
-\newline
-$$q.\ov{q} = 0$$
-\vspace{2mm}
-\newline
+
+\begin{equation}
+q.\ov{q} = 0
+\end{equation}
+
 Dit geldt echter altijd dus deze voorwaarde is triviaal. $y$, $z$ en $t$ kunnen dus willekeurig gekozen worden. Stel $y = \lambda_{1}$, $z = \lambda_{2}$ en $t = \lambda_{3}$.
-\vspace{2mm}
-\newline
 We krijgen volgend stelsel:
-\vspace{2mm}
-\newline
-\[ 
+
+\begin{equation} 
 	\begin{cases}
 	    x &= \ov{\lambda_{1}}(\ov{\lambda_{2}}\lambda_{3} + \lambda_{2}\ov{\lambda_{3}})+\lambda_{1}(\ov{\lambda_{2}}\ov{\lambda_{3}}+\lambda_{2}\lambda_{3})\\
 	    y &= \lambda_{1}\\
 	    z &= \lambda_{2}\\
 	    t &= \lambda_{3}\\
   	\end{cases}
-\]
-\vspace{2mm}
-\newline
+\end{equation}
+
 Als we nu alle waarden doorlopen voor  $\lambda_{1}$, $\lambda_{2}$ en $\lambda_{3}$ krijgen we alle oplossingen voor $\ov{v} = 1$ en dus voor $v = 0$.
 
 \begin{table}[H]
@@ -220,7 +220,7 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 		&= (x^{2}+1)-x(x^{3}+x^{2}+1-(x+1)(x^{2}+1))\\
 		&= (1+x+x^{2})(x^{2}+1)-x(x^{3}+x^{2}+1)\\
 	\end{align}
-	
+
 	\begin{equation}
 		1+x+x^{2} = \text{gezochte inverse} 
 	\end{equation}
@@ -248,6 +248,31 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 	\end{table}
 
 	\paragraph{Deeloefening 2}
+
+	\begin{equation}
+		\begin{cases}
+			2z + 4y = 1 \qquad \qquad \text{\ding{172}} \\
+			3z + 2y = 2 \qquad \qquad \text{\ding{173}}
+		\end{cases}
+	\end{equation}
+
+	\fbox{modulo 7:}
+
+	\begin{align}
+		\text{\ding{172}}+2 \cdot \text{\ding{173}} \Rightarrow & z = 5 \mod 7 \\
+		\Rightarrow & 3+4y = 1 \mod 7 \\
+		\Leftrightarrow & 4y = -2 = 5 \mod 7 \\
+		\Leftrightarrow & y = 5 \cdot 4^{-1} = 5 \cdot 2 = 3 \mod 7
+	\end{align}
+
+	\fbox{modulo 6:}
+
+	\begin{align}
+		\text{\ding{172}}+2 \cdot \text{\ding{173}} \Rightarrow & z = 5 \mod 6 \\
+		\Leftrightarrow & z = 5 \cdot 2^{-1} \mod 6
+	\end{align}
+
+\par De inverse van 2 bestaat echter niet in $\mathbb{Z}_{6}$, dus het stelsel is niet eenduidig oplosbaar in $\mathbb{Z}_{6}$.
 
 	\paragraph{Deeloefening 3}
 

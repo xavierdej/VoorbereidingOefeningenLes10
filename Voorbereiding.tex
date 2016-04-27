@@ -248,7 +248,7 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 	\end{table}
 
 	\paragraph{Deeloefening 2}
-
+	
 	\begin{equation}
 		\begin{cases}
 			2z + 4y = 1 \qquad \qquad \text{\ding{172}} \\
@@ -277,10 +277,10 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 	\paragraph{Deeloefening 3}
 
 	\paragraph{Deeloefening 4}
-
+	
     Voor deze oefening werd gebruik gemaakt van de chinese reststelling. Er wordt naar een oplossing gezocht, indien deze bestaat natuurlijk.
     
-    we vereenvoudigen het systeem:
+    We vereenvoudigen het systeem:
 	\begin{equation}
         \begin{cases}
             3V = 2 \mod 5 \\
@@ -312,7 +312,7 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
             V = 0 \mod 11
         \end{cases}
     \end{equation}
-    we zien in vergelijking \ref{eq:vereenvoudigde opgave} dat $m_1$ tot en met $m_3$ relatief priem zijn met elkaar. (het zijn zelfs priemgetallen, maar dit hoeft niet relatief priem is genoeg)
+    We zien in vergelijking \ref{eq:vereenvoudigde opgave} dat $m_1$ tot en met $m_3$ relatief priem zijn met elkaar. (Het zijn zelfs priemgetallen, maar dit hoeft niet, relatief priem zijn is genoeg.)
     
     \begin{equation}
         M = 5.7.11
@@ -367,14 +367,41 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
     \begin{equation}
         1254 \mod 5.7.11
     \end{equation}
-    en we vereenvoudigen dit tot:
+    En we vereenvoudigen dit tot:
     \begin{equation}
         99 \mod 385
     \end{equation}
     
     
     \paragraph{Deeloefening 5}
+    
+	$ [y(x)]^2 = x^2 +1 \mod(x^3 + x^2 +1)$ met $y(x)$ een veelterm in x over het veld \{0,1\}.
 
+	Modulo $g(x) = x^3 + x^2 +1$. Indien kan ontbinden  geen nuldelers zijn en
+	kan vergelijking worden opgelost. constante term  $\rightarrow g(0) \neq 0 $ en oneven aantal termen $\rightarrow g(1) \neq 0  $. De veelterm g(x) is dus irreduceerbaar. De veelterm met co\"effici\"enten over het veld $\mathbb{Z}_{2}= \{0,1\}$, $x+y=0 \leftrightarrow x=y $. (Geen minteken nodig om naar het ander lid om te brengen.) 
 
+	Stellen de logaritme-tabel voor de vermenigvuldiging op. $X$ is een generator van de groep $F_8 \backslash \{0\}$.
+
+	$x^4 = x * x^3 = x^3 + x = x^2 + x +1$, $x^5$ en $x^6$ analoog.
+
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|c | c | c | c || c | c | c|}
+	\hline
+	\bf{i}    &       & \bf{$x^i$} &    &       &  \bf{$x^{i^2}$} &  \\ 
+	\hline
+	0    &       &      & 1   &       &       & 1  \\ 
+	1    &       & x    &     & $x^2$ &       &    \\
+	2    & $x^2$ &      &     & $x^2$ & x     & 1  \\
+	3    & $x^2$ &      & 1   & $x^2$ & x     &    \\
+	4    & $x^2$ & x    & 1   &       & x     &    \\
+	5    &       & x    & 1   & $x^2$ &       & 1  \\
+	6    & $x^2$ & x    &     &       & x     & 1 \\
+	\hline
+	\end{tabular}
+	\end{table}
+
+	Uit de tabel $x^3 = x^2 +1 = x^{10 \mod 7}=x^{5^2}$. Dit is tevens de enige oplossing. 
+	$x^{5+7k}$ met $k \in \mathbb{Z}$.
 
 \end{document}

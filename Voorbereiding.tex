@@ -278,11 +278,22 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 
 	\paragraph{Deeloefening 4}
 
+    Voor deze oefening werd gebruik gemaakt van de chinese reststelling. Er wordt naar een oplossing gezocht, indien deze bestaat natuurlijk.
+    
+    we vereenvoudigen het systeem:
 	\begin{equation}
         \begin{cases}
             3V = 2 \mod 5 \\
             2V = 2 \mod 7 \\
             4V = 0 \mod 11
+        \end{cases}
+    \end{equation}
+    We zetten nu de opgave om in de vorm van vergelijking \ref{eq:vorm opgave}.
+    \begin{equation} \label{eq:vorm opgave}
+        \begin{cases}
+            V = a_1 \mod m_1 \\
+            V = a_2 \mod m_2 \\
+            V = a_3 \mod m_3
         \end{cases}
     \end{equation}
     
@@ -294,20 +305,15 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
         \end{cases}
     \end{equation}
     
-    \begin{equation}
+    \begin{equation} \label{eq:vereenvoudigde opgave}
         \begin{cases}
             V = 4 \mod 5 \\
             V = 1 \mod 7 \\
             V = 0 \mod 11
         \end{cases}
     \end{equation}
-    \begin{equation}
-        \begin{cases}
-            V = a_1 \mod m_1 \\
-            V = a_2 \mod m_2 \\
-            V = a_3 \mod m_3
-        \end{cases}
-    \end{equation}
+    we zien in vergelijking \ref{eq:vereenvoudigde opgave} dat $m_1$ tot en met $m_3$ relatief priem zijn met elkaar. (het zijn zelfs priemgetallen, maar dit hoeft niet relatief priem is genoeg)
+    
     \begin{equation}
         M = 5.7.11
     \end{equation}
@@ -349,7 +355,24 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
     \begin{equation}
         x = \sum_{i=1}^{r} = a_i.N_i.M_i = 4.3.77 + 1.6.55 + 0.6.11 = 1254
     \end{equation}
-
+    
+    We zien nu duidelijk dat er wel degelijk een oplossing is.
+    Alle oplossingen die bestaan zijn:
+    \begin{equation}
+        x \mod m1.m2.m3        
+    \end{equation}
+    \begin{equation}
+        1254 \mod 5.7.11
+    \end{equation}
+    \begin{equation}
+        1254 \mod 5.7.11
+    \end{equation}
+    en we vereenvoudigen dit tot:
+    \begin{equation}
+        99 \mod 385
+    \end{equation}
+    
+    
     \paragraph{Deeloefening 5}
 
 

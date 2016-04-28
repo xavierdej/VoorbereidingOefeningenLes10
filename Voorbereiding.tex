@@ -259,22 +259,83 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
 	\fbox{modulo 7:}
 
 	\begin{align}
-		\text{\ding{172}}+2 \cdot \text{\ding{173}} \Rightarrow & z = 5 \mod 7 \\
-		\Rightarrow & 3+4y = 1 \mod 7 \\
-		\Leftrightarrow & 4y = -2 = 5 \mod 7 \\
-		\Leftrightarrow & y = 5 \cdot 4^{-1} = 5 \cdot 2 = 3 \mod 7
+		2 \cdot \text{\ding{172}} + 1 \cdot \text{\ding{173}} \Rightarrow & 3y = 4 \mod 7 \\
+		y &= 3^{-1} 4 \mod 7 \\
+		y &= 5 \cdot 4 \mod 7 \\
+		y &= 6 \mod 7 \\
+	\end{align}
+	\begin{align}
+		2z + 4y &= 1 \mod 7 \\
+		2z + 3 &= 1 \mod 7 \\
+		2z &= -2 = 5 \mod 7 \\
+		z &= 2^{-1} \cdot 5 \mod 7 \\
+		z &= 6 \mod 7
 	\end{align}
 
 	\fbox{modulo 6:}
 
 	\begin{align}
-		\text{\ding{172}}+2 \cdot \text{\ding{173}} \Rightarrow & z = 5 \mod 6 \\
-		\Leftrightarrow & z = 5 \cdot 2^{-1} \mod 6
+		1 \cdot \text{\ding{172}} + 1 \cdot \text{\ding{173}} \Rightarrow & 5z = 3 \mod 6 \\
+		z &= 5^{-1} \cdot 3 \mod 6 \\
+		z &= 5 \cdot 3 \mod 6 \\
+		z &= 3 \mod 6 \\
 	\end{align}
 
-\par De inverse van 2 bestaat echter niet in $\mathbb{Z}_{6}$, dus het stelsel is niet eenduidig oplosbaar in $\mathbb{Z}_{6}$.
+	\begin{align}
+		2z + 4y &= 1 \mod 6 \\
+		4y &= 1 \mod 6 \\
+		y &= 4^{-1} \cdot 1 \mod 6
+	\end{align}
+
+\par De inverse van 4 bestaat echter niet in $\mathbb{Z}_{6}$, dus het stelsel is niet eenduidig oplosbaar in $\mathbb{Z}_{6}$.
+
+\clearpage
 
 	\paragraph{Deeloefening 3}
+
+	\begin{equation}
+        \begin{cases}
+            zy + \ov{y} = y + \ov{z} \\
+            \ov{z} + zy = 1 
+        \end{cases}
+    \end{equation}
+
+    \qquad \qquad \qquad \fbox{$f=g$ $\Rightarrow$ $f \ov{g} + \ov{g} f = 0 $}
+
+    \begin{equation}
+    	\begin{cases}
+    		(zy+\ov{y})\overline{(y+\ov{z})}+\overline{(zy+\ov{y})}(y+\ov{z}) = 0 \\
+    		\overline{(\ov{z}+zy)}=0
+    	\end{cases}
+    \end{equation}
+
+    \begin{equation}
+    	\begin{cases}
+    		(zy+\ov{y})(\ov{y}+z)+((\ov{z}+\ov{y})y)(y+\ov{z}) = 0 \\
+    		z(\ov{z}+\ov{y})=0
+    	\end{cases}
+    \end{equation}
+
+    \begin{equation}
+    	\begin{cases}
+    		\ov{y}z + \ov{z}y + \ov{z}y = 0 \\
+    		z\ov{y} = 0
+    	\end{cases}
+    \end{equation}
+
+    \begin{equation}
+    	\begin{cases}
+    		y\ov{z} = 0 \\
+    		z\ov{y} = 0
+    	\end{cases}
+    \end{equation}
+
+	\begin{equation}
+    	\begin{cases}
+    		y\ov{z} + \ov{y}z = 0 \qquad \text{(xor)} \\
+    		y = z
+    	\end{cases}
+    \end{equation}    
 
 	\paragraph{Deeloefening 4}
 	
@@ -315,57 +376,57 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
     We zien in vergelijking \ref{eq:vereenvoudigde opgave} dat $m_1$ tot en met $m_3$ relatief priem zijn met elkaar. (Het zijn zelfs priemgetallen, maar dit hoeft niet, relatief priem zijn is genoeg.)
     
     \begin{equation}
-        M = 5.7.11
+        M = 5 \cdot 7 \cdot 11
     \end{equation}
     
     \begin{equation}
-        M1 = \frac{M}{m_1} = \frac{5.7.11}{5} = 7.11 = 77
+        M1 = \frac{M}{m_1} = \frac{5 \cdot 7 \cdot 11}{5} = 7 \cdot 11 = 77
     \end{equation}
     \begin{equation}
-        M2 = \frac{M}{m_2} = \frac{5.7.11}{7} = 5.11 = 55
+        M2 = \frac{M}{m_2} = \frac{5 \cdot 7 \cdot 11}{7} = 5 \cdot 11 = 55
     \end{equation}
     \begin{equation}
-        M3 = \frac{M}{m_3} = \frac{5.7.11}{11} = 5.7 = 35
+        M3 = \frac{M}{m_3} = \frac{5 \cdot 7 \cdot 11}{11} = 5 \cdot 7 = 35
     \end{equation}
     
     \begin{equation}
-        N_1.M_1 = 1 \mod m_1
+        N_1 \cdot M_1 = 1 \mod m_1
     \end{equation}
     \begin{equation}
-        N_1.77 = 1 \mod 5
+        N_1 \cdot 77 = 1 \mod 5
     \end{equation}
     \fbox{$N_1 = 3$} 
     
     \begin{equation}
-        N_2.M_2 = 1 \mod m_2
+        N_2 \cdot M_2 = 1 \mod m_2
     \end{equation}
     \begin{equation}
-        N_2.55 = 1 \mod 7
+        N_2 \cdot 55 = 1 \mod 7
     \end{equation}
     \fbox{$N_2=6$}
     
     \begin{equation}
-        N_3.M_3 = 1 \mod m_3
+        N_3 \cdot M_3 = 1 \mod m_3
     \end{equation}
     \begin{equation}
-        N_3.35 = 1 \mod 11
+        N_3 \cdot 35 = 1 \mod 11
     \end{equation}
     \fbox{$N_3=6$}
     
     \begin{equation}
-        x = \sum_{i=1}^{r} = a_i.N_i.M_i = 4.3.77 + 1.6.55 + 0.6.11 = 1254
+        x = \sum_{i=1}^{r} = a_i \cdot N_i \cdot M_i = 4 \cdot 3 \cdot 77 + 1 \cdot 6 \cdot 55 + 0 \cdot 6 \cdot 11 = 1254
     \end{equation}
     
     We zien nu duidelijk dat er wel degelijk een oplossing is.
     Alle oplossingen die bestaan zijn:
     \begin{equation}
-        x \mod m1.m2.m3        
+        x \mod m1 \cdot m2 \cdot m3        
     \end{equation}
     \begin{equation}
-        1254 \mod 5.7.11
+        1254 \mod 5 \cdot 7 \cdot 11
     \end{equation}
     \begin{equation}
-        1254 \mod 5.7.11
+        1254 \mod 5 \cdot 7 \cdot 11
     \end{equation}
     En we vereenvoudigen dit tot:
     \begin{equation}
@@ -377,10 +438,9 @@ Als we deze tabel vergelijken met de tabel van de exhaustieve methode (zie deel 
     
 	$ [y(x)]^2 = x^2 +1 \mod(x^3 + x^2 +1)$ met $y(x)$ een veelterm in x over het veld \{0,1\}.
 
-	Modulo $g(x) = x^3 + x^2 +1$. Indien kan ontbinden  geen nuldelers zijn en
-	kan vergelijking worden opgelost. constante term  $\rightarrow g(0) \neq 0 $ en oneven aantal termen $\rightarrow g(1) \neq 0  $. De veelterm g(x) is dus irreduceerbaar. De veelterm met co\"effici\"enten over het veld $\mathbb{Z}_{2}= \{0,1\}$, $x+y=0 \leftrightarrow x=y $. (Geen minteken nodig om naar het ander lid om te brengen.) 
+	Modulo $g(x) = x^3 + x^2 +1$. Dit kan niet ontbonden worden, waardoor er geen nuldelers zijn en de vergelijking oplosbaar is. De constante term  $\rightarrow g(0) \neq 0 $ en oneven aantal termen $\rightarrow g(1) \neq 0  $. De veelterm g(x) is dus irreduceerbaar. De veelterm met co\"effici\"enten over het veld $\mathbb{Z}_{2}= \{0,1\}$, $x+y=0 \leftrightarrow x=y $. (Geen minteken nodig om naar het ander lid om te brengen.) 
 
-	Stellen de logaritme-tabel voor de vermenigvuldiging op. $X$ is een generator van de groep $F_8 \backslash \{0\}$.
+	We stellen de logaritme-tabel voor de vermenigvuldiging op. $X$ is een generator van de groep $F_8 \backslash \{0\}$.
 
 	$x^4 = x * x^3 = x^3 + x = x^2 + x +1$, $x^5$ en $x^6$ analoog.
 
